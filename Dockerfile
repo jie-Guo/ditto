@@ -1,1 +1,1 @@
-from thingsboard/openjdk11:bullseye-slim
+from thingsboard/node:16.20.2-bookworm-slim
