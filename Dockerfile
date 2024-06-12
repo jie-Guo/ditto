@@ -1,1 +1,1 @@
-from node:16.20.2-slim
+from node:16.20.2-bookworm
