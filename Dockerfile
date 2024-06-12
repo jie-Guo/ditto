@@ -1,1 +1,1 @@
-from thingsboard/node:16.20.2-bookworm-slim
+from node:14.21.3-slim
