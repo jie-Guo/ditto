@@ -1,0 +1,35 @@
+name: Docker Image CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+
+env:
+  REGION_ID: cn-hangzhou
+  REGISTRY: registry.cn-hangzhou.aliyuncs.com
+  NAMESPACE: "${{ secrets.ALIYUN_NAME_SPACE }}"
+  IMAGE: ditto
+  TAG: latest
+
+jobs:
+  push_to_registry:
+    name: Push Docker image to Docker Hub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      # 1.1 Login to ACR
+      - name: Login to ACR with the AccessKey pair
+        uses: aliyun/acr-login@v1
+        with:
+          region-id: "${{ env.REGION_ID }}"
+          access-key-id: "${{ secrets.ACCESS_KEY_ID }}"
+          access-key-secret: "${{ secrets.ACCESS_KEY_SECRET }}"
+
+      # 1.2 Build and push image to ACR
+      - name: Build and push image to ACR
+        run: |
+          docker build --tag "$REGISTRY/$NAMESPACE/$IMAGE:$TAG" .
+          docker push "$REGISTRY/$NAMESPACE/$IMAGE:$TAG"
