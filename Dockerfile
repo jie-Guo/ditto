@@ -1,1 +1,1 @@
-from ubuntu:24.04
+from thingsboard/node:16.20.2-bookworm-slim
