@@ -1,1 +1,1 @@
-from node:16.20.2-bookworm
+from node:20.11.1
