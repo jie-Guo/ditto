@@ -1,1 +1,1 @@
-from sonatype/nexus3:3.69.0
+from rancher/local-path-provisioner:v0.0.27
