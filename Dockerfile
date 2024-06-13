@@ -1,1 +1,1 @@
-from rancher/local-path-provisioner:v0.0.27
+from kubesphere/ks-installer:v3.4.1
