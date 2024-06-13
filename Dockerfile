@@ -1,1 +1,1 @@
-from node:20.11.1
+from sonatype/nexus3:3.69.0
