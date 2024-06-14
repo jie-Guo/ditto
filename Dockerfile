@@ -1,1 +1,1 @@
-from kubesphere/ks-installer:v3.4.1
+from node:18.17.1-slim
