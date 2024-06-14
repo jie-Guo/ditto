@@ -1,1 +1,1 @@
-from node:18.17.1-slim
+from nginx:1.27-alpine-slim
