@@ -1,1 +1,1 @@
-from nginx:1.27-alpine-slim
+from apache/superset-cache:3.10-slim-bookworm
